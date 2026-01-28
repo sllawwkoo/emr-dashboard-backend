@@ -4,17 +4,34 @@ const { v4: uuidv4 } = require('uuid')
 const filePath = './data/patients.json'
 
 exports.getAllPatients = async (req, res) => {
-  const patients = await readData(filePath)
-  const { name } = req.query
-  if (name) {
-    const filtered = patients.filter((p) =>
-      p.fullName.toLowerCase().includes(name.toLowerCase())
-    )
-    res.json(filtered)
-  } else {
-    res.json(patients)
-  }
-}
+	const patients = await readData(filePath);
+	const { name, page = 1, limit = 5 } = req.query;
+	let filteredPatients = patients;
+
+	if (name) {
+		filteredPatients = filteredPatients.filter((p) =>
+			p.fullName.toLowerCase().includes(name.toLowerCase()),
+		);
+	}
+
+	const pageNum = parseInt(page);
+	const limitNum = parseInt(limit);
+	const startIndex = (pageNum - 1) * limitNum;
+	const endIndex = startIndex + limitNum;
+
+	const paginatedPatients = filteredPatients.slice(startIndex, endIndex);
+
+	const totalItems = filteredPatients.length;
+	const totalPages = Math.ceil(totalItems / limitNum);
+
+	res.json({
+		data: paginatedPatients,
+		total: totalItems,
+		totalPages,
+		page: pageNum,
+		limit: limitNum,
+	});
+};
 
 exports.getPatientById = async (req, res) => {
   const patients = await readData(filePath)
