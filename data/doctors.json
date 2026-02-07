@@ -4,7 +4,7 @@
     "fullName": "Олена Ковальчук",
     "specialty": "Терапевт",
     "email": "olena.kov@example.com",
-    "phone": "+380501112233",
+    "phone": "+380 50 111 22 33",
     "room": "101",
     "notes": "Працює з 09:00 до 15:00"
   },
@@ -13,7 +13,7 @@
     "fullName": "Микола Сидоренко",
     "specialty": "Кардіолог",
     "email": "mykola.syd@med.com",
-    "phone": "+380631234567",
+    "phone": "+380 63 123 45 67",
     "room": "202",
     "notes": "Кардіоогляд по понеділках"
   },
@@ -22,7 +22,7 @@
     "fullName": "Анна Дорошенко",
     "specialty": "Дерматолог",
     "email": "anna.doro@gmail.com",
-    "phone": "+380673334455",
+    "phone": "+380 67 333 44 55",
     "room": "303",
     "notes": ""
   },
@@ -31,7 +31,7 @@
     "fullName": "Ігор Лисенко",
     "specialty": "Ортопед",
     "email": "lys.igor@hospital.ua",
-    "phone": "+380931122334",
+    "phone": "+380 93 112 23 34",
     "room": "104",
     "notes": ""
   },
@@ -40,7 +40,7 @@
     "fullName": "Світлана Гончар",
     "specialty": "Невролог",
     "email": "svit.gonchar@gmail.com",
-    "phone": "+380682223344",
+    "phone": "+380 68 222 33 44",
     "room": "105",
     "notes": ""
   },
@@ -48,9 +48,9 @@
     "id": "d868f062-6d09-43eb-9335-9c8c7f81db77",
     "fullName": "Баба Галя",
     "specialty": "широкого профілю",
-    "room": "22",
-    "email": "ivan@example.com",
-    "phone": "333",
+    "room": "226",
+    "email": "galine@gmail.com",
+    "phone": "+380 63 111 22 33",
     "notes": "33"
   }
 ]
